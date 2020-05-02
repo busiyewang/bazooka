@@ -1,22 +1,24 @@
-package protocol.http;
-import framework.RpcRequest;
-import framework.RpcResponse;
+package com.paul.procotol.http;
+
+import com.paul.framework.RpcRequest;
+import com.paul.framework.RpcResponse;
 import org.apache.commons.io.IOUtils;
+import org.objenesis.Objenesis;
 
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+
 public class HttpClient {
-
-    private static HttpClient INSTANCE = new HttpClient ();
-
-    private HttpClient() {
-    }
-
-    public static HttpClient getInstance() {
-        return INSTANCE;
-    }
+	
+	private static HttpClient INSTANCE = new HttpClient();
+	
+	private HttpClient(){}
+	
+	public static HttpClient getInstance(){
+		return INSTANCE;
+	}
 
     public Object post(String hostname, Integer port, RpcRequest invocation){
 
