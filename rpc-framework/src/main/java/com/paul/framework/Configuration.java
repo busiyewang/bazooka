@@ -1,9 +1,10 @@
-package framework;
-
+package com.paul.framework;
 
 import java.util.List;
 
 public class Configuration {
+
+
 
     private String procotol;
     private String name;
@@ -14,6 +15,8 @@ public class Configuration {
     private String stragety;
     private List<ServiceProvider> providerList;
     private List<ServiceConsumer> consumerList;
+
+
     private static Configuration configuration = new Configuration();
 
     private Configuration(){};
