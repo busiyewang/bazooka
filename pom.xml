@@ -11,12 +11,12 @@
 
 
     <modules>
-        <!--<module>rpc-consumer</module>-->
-        <!--<module>rpc-provider</module>-->
+        <module>rpc-consumer</module>
+        <module>rpc-provider</module>
         <module>rpc-register</module>
         <module>rpc-protocol</module>
         <module>rpc-framework</module>
-        <!--<module>rpc-spring</module>-->
+        <module>rpc-spring</module>
     </modules>
 
 
