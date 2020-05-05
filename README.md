@@ -1,5 +1,10 @@
 # bazooka  一个rpc的基础实现
 
+
+思考问题：
+1、为什么用rpc不用http
+2、rpc 如何处理序列化的实现的
+
 ##中文简介
 1. RPC 基于 Java 编写，网络通信依赖与 netty，http，socket。
 2. 支持基于配置的底层协议切换，可以选择 netty，http，socket。

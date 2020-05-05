@@ -2,8 +2,6 @@ package com.paul.procotol.http;
 
 import com.paul.framework.RpcRequest;
 import com.paul.framework.RpcResponse;
-import com.paul.framework.URL;
-import com.paul.register.Register;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.apache.commons.io.IOUtils;

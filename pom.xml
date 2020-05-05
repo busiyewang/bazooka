@@ -6,44 +6,19 @@
 
     <groupId>RPCeasily</groupId>
     <artifactId>RPCeasily</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
 
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>8</source>
-                    <target>8</target>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+    <modules>
+        <!--<module>rpc-consumer</module>-->
+        <!--<module>rpc-provider</module>-->
+        <module>rpc-register</module>
+        <module>rpc-protocol</module>
+        <module>rpc-framework</module>
+        <!--<module>rpc-spring</module>-->
+    </modules>
 
 
-    <dependencies>
-    <dependency>
-        <groupId>io.netty</groupId>
-        <artifactId>netty-all</artifactId>
-        <version>4.1.10.Final</version>
-    </dependency>
-
-        <!--   内嵌tomcat   -->
-        <dependency>
-            <groupId>org.apache.tomcat.embed</groupId>
-            <artifactId>tomcat-embed-core</artifactId>
-            <version>[9.0.17,)</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>1.3.2</version>
-        </dependency>
-
-    </dependencies>
 
 </project>
