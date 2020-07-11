@@ -1,4 +1,4 @@
-package com.paul.procotol.dubbo.channelpool;
+package com.paul.procotol.netty.channelpool;
 
 import com.paul.framework.MessageCallBack;
 

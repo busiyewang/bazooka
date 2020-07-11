@@ -1,15 +1,13 @@
-package com.paul.procotol.dubbo;
+package com.paul.procotol.netty;
 
 import java.util.Date;
 import java.util.concurrent.ConcurrentHashMap;
 
 import com.paul.framework.MessageCallBack;
-import com.paul.framework.RpcRequest;
 import com.paul.framework.RpcResponse;
-import com.paul.procotol.dubbo.channelpool.ResponseHolder;
+import com.paul.procotol.netty.channelpool.ResponseHolder;
 
 import io.netty.channel.ChannelHandlerContext;
-import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.channel.SimpleChannelInboundHandler;
 
 public class NettyClientHandler extends SimpleChannelInboundHandler<RpcResponse> {

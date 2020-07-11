@@ -1,4 +1,4 @@
-package com.paul.procotol.dubbo;
+package com.paul.procotol.netty;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -10,9 +10,6 @@ import io.netty.channel.ChannelHandlerContext;
 
 import com.paul.framework.RpcRequest;
 import com.paul.framework.RpcResponse;
-import com.paul.framework.URL;
-import com.paul.register.Register;
-import org.apache.commons.beanutils.MethodUtils;
 
 public class InvokeTask implements Runnable{
 	
