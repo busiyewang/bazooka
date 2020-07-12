@@ -17,7 +17,7 @@ public class SocketClient {
             try {
                 Socket socket = new Socket ( InetAddress.getLocalHost (), port );
                 BufferedReader bufferedReader = new BufferedReader ( new InputStreamReader ( socket.getInputStream () ) );
-                bufferedReader.lines ().forEach ( s -> System.out.println ( "接受消息" + s ) );
+               // bufferedReader.lines ().forEach ( s -> System.out.println ( "接受消息" + s ) );
             } catch (UnknownHostException e) {
                 e.printStackTrace ();
             } catch (IOException e) {

@@ -1,11 +1,7 @@
 package com.paul.spring;
 
-import com.paul.framework.Configuration;
 import com.paul.framework.ServiceConsumer;
-import com.paul.framework.ServiceProvider;
-import com.paul.register.RegisterCenter4Provider;
 import com.paul.register.zookeeper.ZookeeperRegisterCenter;
-import org.apache.commons.collections.MapUtils;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
@@ -13,8 +9,6 @@ import org.springframework.beans.factory.support.GenericBeanDefinition;
 import org.springframework.beans.factory.xml.BeanDefinitionParser;
 import org.springframework.beans.factory.xml.ParserContext;
 import org.w3c.dom.Element;
-
-import com.paul.procotol.dubbo.channelpool.NettyChannelPoolFactory;
 
 import java.util.ArrayList;
 import java.util.List;
