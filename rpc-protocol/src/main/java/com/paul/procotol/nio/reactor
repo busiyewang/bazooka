@@ -1,0 +1,19 @@
+一、Reactor 是什么
+关于reactor 是什么，我们先从wiki上看下:
+The reactor design pattern is an event handling pattern for handling service requests delivered concurrently to a service handler by one or more inputs. The service handler then demultiplexes the incoming requests and dispatches them synchronously to the associated request handlers.
+反应器设计模式是一种事件处理模式，用于处理由一个或多个输入并发交付给服务处理程序的服务请求。服务处理程序然后将传入的请求进行多路分解，并将它们同步分派给相关的请求处理程序。
+从上述文字中我们可以看出以下关键点 ：
+1. 事件驱动（event handling）
+2. 可以处理一个或多个输入源（one or more inputs）
+3. 通过Service Handler同步的将输入事件（Event）采用多路复用分发给相应的Request Handler（多个）处理
+二、reactor 实现
+1、单Reactor多线程模型
+ 在处理业务逻辑，也就是获取到IO的读写事件之后，交由线程池来处理，这样可以减小主reactor的性能开销，从而更专注的做事件分发工作了，从而提升整个应用的吞吐
+ 
+2、多Reactor多线程模型
+第三种模型比起第二种模型，是将Reactor分成两部分，
+1. mainReactor负责监听server socket，用来处理新连接的建立，将建立的socketChannel指定注册给subReactor。
+2. subReactor维护自己的selector, 基于mainReactor 注册的socketChannel多路分离IO读写事件，读写网 络数据，对业务处理的功能，另其扔给worker线程池来完成。
+第三种模型中，我们可以看到，mainReactor 主要是用来处理网络IO 连接建立操作，通常一个线程就可以处理，而subReactor主要做和建立起来的socket做数据交互和事件业务处理操作，它的个数上一般是和CPU个数等同，每个subReactor一个县城来处理。
+此种模型中，每个模块的工作更加专一，耦合度更低，性能和稳定性也大量的提升，支持的可并发客户端数量可达到上百万级别。
+关于此种模型的应用，目前有很多优秀的矿建已经在应用了，比如mina 和netty 等。上述中去掉线程池的第三种形式的变种，也 是Netty NIO的默认模式。下一节我们将着重讲解netty的架构模式。
