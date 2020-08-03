@@ -16,3 +16,17 @@ RPC 就是为了解决上面的问题而生的，首先用户只需要调用服�
 5. 服务端使用线程池提高并发能力。
 6. 客户端使用 channel 缓存提高并发能力。
 7. 支持多序列化协议，多负载均衡协议选择。
+
+
+##模块介绍
+rpc-procotol： 基于http，nio的reactor模型，netty框架异步通信模块 
+rpc-spring：框架是基于 Spring 开发的，这个模块是将Spring 整合起来，比如自动注入代理 Bean，启动服务端 Server 等。 
+rpc-register：注册中心模块，负责服务发现和容错。 
+rpc-monitor：将注册中心的信息显示在网页上。 
+rpc-consumer：消费端模块，用于测试。 
+rpc-provider：服务端模块，用于测试。
+
+
+
+
+
